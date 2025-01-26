@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Yogita</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f39c12, #f1c40f);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 3s;
+        }
+
+        .special-message {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            display: none;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .balloons {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            animation: floatUp 5s infinite ease-in-out;
+        }
+
+        .balloons img {
+            width: 80px;
+            margin: 10px;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Yogita! 🎉</h1>
+        <p>Wishing you a day filled with love, laughter, and all the things that make you happiest!</p>
+        <p class="special-message" id="special-message">Sorry if I ever upset you, Yogita. You mean so much to me, and I hope this message makes your day a little brighter! 💖</p>
+        <p style="cursor: pointer; color: #e74c3c; text-decoration: underline;" onclick="showMessage()">Click here for a special message</p>
+    </div>
+    <div class="balloons">
+        <img src="balloon-300x300.jpg" alt="Balloon 1">
+        <img src="balloon-300x300.jpg" alt="Balloon 2">
+        <img src="balloon-300x300.jpg" alt="Balloon 3">
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('special-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
